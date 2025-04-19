@@ -30,7 +30,7 @@ pipeline {
     }
     stage('Approval') {
       steps {
-        echo 'Approving...'
+        sleep time:10, unit: 'SECONDS'
       }
     }
     stage('Deploy to Production') {
