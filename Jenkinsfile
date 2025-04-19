@@ -11,10 +11,6 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Compile the code and generate any necessary artefacts'
-      }
-    }
-    stage('Build') {
-      steps {
         echo 'Fetch the source code from the directory path specified by the environment variable'
       }
     }
