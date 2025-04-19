@@ -9,7 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Compile the code and generate any necessary artefacts'
-        echo 'Fetch the source code from the directory path specified by the environment variable'
+        echo 'Fetch the source code from ${env.DIRECTORY_PATH}'
       }
     }
     stage('Test') {
