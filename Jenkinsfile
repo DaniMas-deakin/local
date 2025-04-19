@@ -5,19 +5,22 @@ pipeline {
         TESTING_ENVIRONMENT    = 'dev'
         PRODUCTION_ENVIRONMENT = 'Danielle Maslen'               
     }
-    stages {
-        /* stages appear below */
-    }
-}
+   }
   stages {
     stage('Build') {
       steps {
-        echo 'Building...'
+        echo 'Compile the code and generate any necessary artefacts'
+      }
+    }
+    stage('Build') {
+      steps {
+        echo 'Fetch the source code from the directory path specified by the environment variable'
       }
     }
     stage('Test') {
       steps {
-        echo 'Testing...'
+        echo 'Unit tests'
+        echo 'Integration tests'
       }
     }
     stage('Code Quality Check') {
