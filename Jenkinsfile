@@ -25,7 +25,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        echo 'Deploy the application to a testing environment specified by the environment variable'
+        echo "Deploy the application to ${env.TESTING_ENVIRONMENT}"
       }
     }
     stage('Approval') {
@@ -35,7 +35,7 @@ pipeline {
     }
     stage('Deploy to Production') {
       steps {
-        echo 'Deploying to Production...'
+        echo "Deploying to ${env.PRODUCTION_ENVIRONMENT}"
       }
     }
   }
