@@ -5,8 +5,6 @@ pipeline {
         TESTING_ENVIRONMENT    = 'dev'
         PRODUCTION_ENVIRONMENT = 'Danielle Maslen'   
     }
-    
-  
   stages {
     stage('Build') {
       steps {
@@ -22,12 +20,12 @@ pipeline {
     }
     stage('Code Quality Check') {
       steps {
-        echo 'Checking Code Quality...'
+        echo 'Check the quality of the code'
       }
     }
     stage('Deploy') {
       steps {
-        echo 'Deploying...'
+        echo 'Deploy the application to a testing environment specified by the environment variable'
       }
     }
     stage('Approval') {
