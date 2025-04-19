@@ -3,9 +3,10 @@ pipeline {
     environment {
         DIRECTORY_PATH         = '/home/local/Jenkinsfile' 
         TESTING_ENVIRONMENT    = 'dev'
-        PRODUCTION_ENVIRONMENT = 'Danielle Maslen'               
+        PRODUCTION_ENVIRONMENT = 'Danielle Maslen'   
     }
-   }
+    
+  
   stages {
     stage('Build') {
       steps {
@@ -44,6 +45,6 @@ pipeline {
       }
     }
   }
-
+}
     
     
